@@ -19,14 +19,6 @@
 \\
 }
 
-% For use in the Technical Background section
-\newcommand{\background}[2]{
-\begin{minipage}[t]{1.25in}#1:\end{minipage}
-\begin{minipage}[t]{4.00in}#2\end{minipage}
-\\
-}
-
-
 \newcommand{\heading}[1]{
 #1
 \\
@@ -38,28 +30,19 @@
 }
 
 \begin{document}
-\address{\textbf{Joel Franusic}\\ San Francisco, CA 94117\\ joel@franusic.com}
-
-\heading{TECHNICAL BACKGROUND}
-
-\background{Platforms}{GNU/Linux, Mac OS X, IOS, Emacs, Windows 9x/2k/XP}
-\background{Languages}{C, Perl, PHP, Python}
-\background{Software}{Apache, Ethereal, \LaTeX, MediaWiki, Microsoft Office, Samba, Squid Web Cache, Symantec Ghost}
+\address{\textbf{Jo\"el Franusic}\\ San Francisco, CA 94117\\ joel@franusic.com}
 
 \heading{EXPERIENCE}
 
 \work{PBwiki, Inc.}{Nov 2007 - Jan 2008}{San Mateo, California}{Systems Engineer}{
-Implemented OpenID login for PBwiki using JanRain's PHP OpenID library.
-\\
-Migrated PBwiki code and servers from PHP4 to PHP5.
-\\
-Installed and maintained a reliable office link in the face of unreliable network connectivity by configuring a software router to use one of seven network links.
-\\
-Installed, maintained, and removed servers from the colocation facility.
-\\
-Performed a live cutover of the core network switch with no downtime.
-\\
-Remotely resolved a DDOS issue on Christmas Eve. Resolved site slowdown issue on New Years Eve.
+    \begin{itemize}
+    \item Implemented OpenID login for PBwiki using JanRain's PHP OpenID library.
+    \item Migrated PBwiki code and servers from PHP4 to PHP5.
+    \item Installed and maintained a reliable office link in the face of unreliable network connectivity by configuring a software router to use one of seven network links.
+    \item Installed, maintained, and removed servers from the colocation facility.
+    \item Performed a live cutover of the core network switch with no downtime.
+    \item Remotely resolved a DDOS issue on Christmas Eve. Resolved site slowdown issue on New Years Eve.
+    \end{itemize}
 }
 
 \work{SuperHappyDevHouse}{Nov 2005 - Present}{Bay Area, California}{Organizer}{
@@ -82,6 +65,8 @@ Proposed, installed, and promoted the use of MediaWiki - which eventually became
 \\
 Created and maintained Mac OS X NetBoot images, managed Mac OS X NetBoot servers, provided technical support for 3 computer labs with a total of roughly 80 machines. Made use of best practices to turn a full time workload into a part time workload.
 }
+
+\newpage
 
 \work{Terracom S.A.R.L.}{Jun 2004 - Sep 2004}{Kigali, Rwanda}{Consultant}{
 Worked between 10 and 12 hours a day for a wireless ISP in Rwanda.
@@ -115,5 +100,7 @@ including a custom Bugzilla installation used for company-wide bug tracking.
 Administration of Sun Netra X1 and E420R systems running Solaris 8. 
 Shared administration on various Gnu/Linux 2.4 systems including the corporate webserver.
 }
+
+% Citizenship: United States (by birth)
 
 \end{document}
