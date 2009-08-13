@@ -1,9 +1,10 @@
 \documentclass[10pt]{article}
 
+\usepackage{url}
 % Set up the document per Corrie's design
 \usepackage{geometry}
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
 \setlength{\parindent}{0in}
 
 % #1: Company #2: Date range #3: Company Location  #4: Title #5: Description
@@ -13,8 +14,8 @@
 #4\\*
 #2\\*
 \\*
-\makebox[1.25in][l]{}
-\begin{minipage}[t]{5.00in}\small{#5}\end{minipage}
+\makebox[1in][l]{}
+\begin{minipage}[t]{5.50in}\small{#5}\end{minipage}
 \\
 \\
 }
@@ -31,26 +32,41 @@
 
 \begin{document}
 \address{\textbf{Jo\"el Franusic}\\ San Francisco, CA 94117\\ joel@franusic.com}
-
+\\
+\\
+\\
 \heading{EXPERIENCE}
 
-\work{PBwiki, Inc.}{Nov 2007 - Jan 2008}{San Mateo, California}{Systems Engineer}{
-    \begin{itemize}
-    \item Implemented OpenID login for PBwiki using JanRain's PHP OpenID library.
-    \item Migrated PBwiki code and servers from PHP4 to PHP5.
-    \item Installed and maintained a reliable office link in the face of unreliable network connectivity by configuring a software router to use one of seven network links.
-    \item Installed, maintained, and removed servers from the colocation facility.
-    \item Performed a live cutover of the core network switch with no downtime.
-    \item Remotely resolved a DDOS issue on Christmas Eve. Resolved site slowdown issue on New Years Eve.
-    \end{itemize}
+\work{SuperHappyDevHouse}{Nov 2005 - Present}{Bay Area, California}{Co-organizer}{
+SuperHappyDevHouse is a monthly hackathon event that combines serious and not-so-serious productivity with a fun and exciting party atmosphere. Primary tasks include welcoming newcomers to the event and interfacing with organizations who host SuperHappyDevHouse (Sun, Google, NASA Ames, etc).
+Oversaw the running of the ``Lightning Talks'' up until the 30th SHDH event.
+\\
+\\
+Wrote dynamic name tag layout software in Python and helped design the automated name tag printing system that is used at the event.
 }
 
-\work{SuperHappyDevHouse}{Nov 2005 - Present}{Bay Area, California}{Organizer}{
-Help organize a monthly hackathon event that combines serious and not-so-serious productivity with a fun and exciting party atmosphere. ``Tasks'' include welcoming newcomers to the event, overseeing the ``Lightning Talks'', and interfacing with companies who occasionally host SuperHappyDevHouse, including Sun and Google.
+\work{NetBooks, Inc.}{Jan 2009 - Aug 2009}{San Francisco, California}{System Administrator}{
+Worked with a team responsible for the software and external services that ran the ``Working Point'' Ruby on Rails application. Helped to setup, maintain, and manage Capistrano deploy scripts as well as the production infrastructure consisting of Ubuntu, Nginx, Apache, Passenger, git, and related software.
 \\
 \\
-Wrote dynamic nametag layout software and helped architect the automated nametag printing system that is used at the event.
+Set up a reliable centralized logging solution for approximately 30 machines using rsyslog, as well as an internal SSL Certificate Authority. Proposed and implemented a backup strategy for corporate and customer data involving encryption of off-site backups, automatic validation of MySQL data, and procedures for restoration of backups in my absence.
+\\
+\\
+Managed the safe handling and destruction of sensitive customer data contained on physical servers as part of a move to Amazon's EC2 platform. Moved sensitive employee data from one law firm to another, under direction of the CEO.
 }
+
+\work{PBwiki, Inc.}{Nov 2007 - Jan 2009}{San Mateo, California}{Systems Engineer}{
+Implemented OpenID login for PBwiki using JanRain's PHP OpenID library. 
+Improved existing Perl deploy scripts to reduce code rollout time from over 10 minutes to under 1 second.
+Migrated PBwiki code and servers from PHP4 to PHP5. 
+\\
+\\
+Setup and maintained a reliable office link in the face of unreliable network connectivity. 
+Performed a live cutover of the core network switch with no downtime. 
+Managed, installed, and removed servers from PBwiki's colocation facility. 
+}
+
+\newpage 
 
 \work{Cuesta College}{Nov 2003 - Nov 2007}{San Luis Obispo, California}{Network Technician}{
 Provided ``Tier 3'' support for a Community College. 
@@ -63,23 +79,20 @@ Automated many maintenance tasks using Bash scripting and Perl.
 Proposed, installed, and promoted the use of MediaWiki - which eventually became the primary source of documentation for the department.
 \\
 \\
-Created and maintained Mac OS X NetBoot images, managed Mac OS X NetBoot servers, provided technical support for 3 computer labs with a total of roughly 80 machines. Made use of best practices to turn a full time workload into a part time workload.
+Created and maintained Mac OS X NetBoot images. Managed Mac OS X NetBoot servers and provided technical support for 3 computer labs with a total of roughly 80 machines. Made use of best practices to turn a full time workload into a part time workload.
 }
 
-\newpage
-
 \work{Terracom S.A.R.L.}{Jun 2004 - Sep 2004}{Kigali, Rwanda}{Consultant}{
-Worked between 10 and 12 hours a day for a wireless ISP in Rwanda.
+Gave hands-on training to Terracom staff - topics included: RSA public key encryption, packet sniffing, HTTP proxies, and Symantec Ghost.
 \\
 \\
-Gave hands-on training to staff, topics included: RSA Encryption, packet sniffing, HTTP proxies, and use of Symantec Ghost.
+Set up and configured a Squid Web Proxy Cache server which increased the apparent capacity of a saturated 3 megabit satellite link and reduced the response time of frequently visited websites from 1000-3000 milliseconds to 10-30 milliseconds.
 \\
 \\
-Set up and configured a Squid Web Proxy Cache server which provided massive improvements in response time and increased the apparent capacity of a saturated 3 Megabit satellite link by approximately 30\%.
-\\
-\\
-Worked under the direction of the Vice Rector at the Kigali Institute of Science and Technology to train staff 
-in the use of Symantec Ghost, punch-down methodology, and virus protection. 
+Worked under the direction of
+Albert Butare the Vice Rector at the Kigali Institute of Science and Technology
+(now the Rwandan Minister of Energy and Communications) 
+to train staff in the use of Symantec Ghost, punch-down methodology, and virus protection. 
 Identified and recommended four students to be hired as IT staff by the school.
 }
 
@@ -88,11 +101,6 @@ Provided technical support for a wireless ISP with a customer base in the thousa
 Provided training and assistance to a wide range of computer users. 
 Other tasks included on-site assessments for potential wireless customers, network troubleshooting, and maintenance.
 }
-
-\work{Applied Materials}{Jan 2003 - Jan 2004}{Santa Clara, California}{Contract Software Development}{
-Used PHP and MySQL to develop an extensible web application for the purpose of scheduling time on wafer fabrication tools.
-}
-
 
 \work{Synovation, Inc.}{Jan 2002 - Nov 2002}{Modesto, California}{Software Administrator}{
 Responsible for modification, maintenance, and support of various in-house software systems 
